@@ -7,6 +7,6 @@ metadata:
     github.com/project-slug: eduaran1/${{values.app_name}}
     backstage.io/techdocs-ref: dir:.
 spec:
-  type: serice
+  type: service
   lifecycle: experimental
   owner: development

@@ -2,9 +2,10 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: ${{values.app_name}}
-  description: Python aoo displays time named ${{values.app_name}}
+  description: Python app displays time - named ${{values.app_name}}
   annotations:
     github.com/project-slug: eduaran1/${{values.app_name}}
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: serice
   lifecycle: experimental

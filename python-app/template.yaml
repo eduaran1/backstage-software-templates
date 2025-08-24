@@ -28,10 +28,6 @@ spec:
           description: The environment where this component will be deployed
           enum:
             - dev
-            - uat
-            - qa
-            - staging
-            - fut
             - prod
 
   # here's the steps that are executed in series in the scaffolder backend
@@ -42,8 +38,8 @@ spec:
       input:
         url: ./template
         values:
-          component_id: ${{ parameters.component_id }}
-          environment: ${{ parameters.environment }}
+          app_name: ${{ parameters.component_id }}
+          app_env: ${{ parameters.environment }}
 
     - id: publish
       name: Publish

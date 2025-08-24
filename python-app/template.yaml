@@ -46,7 +46,7 @@ spec:
       action: publish:github
       input:
         description: This is ${{ parameters.component_id }}
-        repoUrl: github.com?owner=eduaran1&repo=${{ parameters.component_id }}
+        repoUrl: github.com?owner=eduaran-org&repo=${{ parameters.component_id }}
         defaultBranch: 'main'
 
     - id: register

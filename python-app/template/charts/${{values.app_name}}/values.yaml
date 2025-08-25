@@ -1,4 +1,4 @@
-replicaCount: 2
+replicaCount: 1
 image:
   repository: erangel/${{values.app_name}}
   pullPolicy: IfNotPresent
@@ -34,11 +34,11 @@ resources:
     memory: 50M
 livenessProbe:
   httpGet:
-    path: /
+    path: /api/vi/healthz
     port: http
 readinessProbe:
   httpGet:
-    path: /
+    path: /api/vi/healthz
     port: http
 autoscaling:
   enabled: false

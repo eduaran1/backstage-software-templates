@@ -9,10 +9,10 @@ def info():
     return jsonify({
             'time':datetime.datetime.now().strftime("%I:%M:%S%p on %B %d, %Y"),
             'hostname': socket.gethostname(),
-            'message': 'You are doing grat, human!!! :)',
+            'message': 'You are doing grat, human! :)',
             'deployed_on': 'kubernetes',
             'env': '${{values.app_env}}',
-            'app_name': '${{values.app_name}}''
+            'app_name': '${{values.app_name}}'
     }) 
 
 @app.route('/api/v1/hetlhz')

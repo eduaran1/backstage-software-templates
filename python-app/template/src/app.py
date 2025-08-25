@@ -15,8 +15,8 @@ def info():
             'app_name': '${{values.app_name}}'
     }) 
 
-@app.route('/api/v1/hetlhz')
-def hetlhz():
+@app.route('/api/v1/healthz')
+def healthz():
     return jsonify({'status':'up'}), 200
 
 if __name__ == '__main__':

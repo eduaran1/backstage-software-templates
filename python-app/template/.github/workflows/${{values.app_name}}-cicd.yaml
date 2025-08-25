@@ -48,6 +48,7 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with: 
           message: 'Update values.yaml with commit ${{ "${{needs.ci.outputs.commit_id}}" }}'
+          push: dev eduaran-orgriptupdate/${{values.app_name}} --set-upstream --force
 
       - name: Install argocd
         shell: bash

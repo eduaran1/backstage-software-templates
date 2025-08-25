@@ -6,13 +6,13 @@ image:
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
+podAnnotations: {}
+podLabels: {}
 serviceAccount:
   create: false
   automount: true
   annotations: {}
   name: ""
-podAnnotations: {}
-podLabels: {}
 podSecurityContext: {}
 securityContext: {}
 service:
@@ -28,17 +28,17 @@ ingress:
         - path: /
           pathType: Prefix
   tls: []
-resources: 
+resources:
   requests:
     cpu: 50m
     memory: 50M
 livenessProbe:
   httpGet:
-    path: /api/vi/healthz
+    path: /api/v1/healthz
     port: http
 readinessProbe:
   httpGet:
-    path: /api/vi/healthz
+    path: /api/v1/healthz
     port: http
 autoscaling:
   enabled: false

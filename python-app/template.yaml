@@ -38,15 +38,15 @@ spec:
       input:
         url: ./template
         values:
-          app_name: ${{ parameters.component_id }}
-          app_env: ${{ parameters.environment }}
+          app_name: ${{parameters.component_id}}
+          app_env: ${{parameters.environment}}
 
     - id: publish
       name: Publish
       action: publish:github
       input:
         description: This is ${{ parameters.component_id }}
-        repoUrl: github.com?owner=eduaran-org&repo=${{ parameters.component_id }}
+        repoUrl: github.com?owner=eduaran-org&repo=${{parameters.component_id}}
         defaultBranch: 'main'
 
     - id: register

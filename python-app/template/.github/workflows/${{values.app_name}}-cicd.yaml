@@ -5,7 +5,7 @@ on:
     paths:
       - src/**
     branches:
-      - dev
+      - master
 
 jobs:
   ci:
@@ -33,9 +33,6 @@ jobs:
     steps:
 
       - uses: actions/checkout@v3
-        with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.event.pull_request.head.ref }}
 
       - name: Modify values file
         shell: bash
@@ -48,7 +45,6 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with: 
           message: 'Update values.yaml with commit ${{ "${{needs.ci.outputs.commit_id}}" }}'
-          push: dev eduaran-org/${{values.app_name}} --set-upstream --force
 
       - name: Install argocd
         shell: bash

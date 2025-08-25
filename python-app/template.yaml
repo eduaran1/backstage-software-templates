@@ -47,8 +47,9 @@ spec:
       input:
         description: This is ${{ parameters.component_id }}
         repoUrl: github.com?owner=eduaran-org&repo=${{parameters.component_id}}
-        defaultBranch: 'dev'
+        defaultBranch: 'master'
         repoVisibility: public
+        protectDefaultBranch: false
 
     - id: register
       name: Register

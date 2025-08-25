@@ -5,7 +5,7 @@ on:
     paths:
       - src/**
     branches:
-      - master
+      - main
 
 jobs:
   ci:
@@ -52,6 +52,7 @@ jobs:
           curl -ksSL https://argocd-server.argocd/download/argocd-linux-amd64 >> argocd;
           chmod +x argocd;
           sudo mv ./argocd /usr/local/bin/argocd
+
       - name: Argocd app sync
         shell: bash
         run: |

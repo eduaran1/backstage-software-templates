@@ -16,7 +16,7 @@ def info():
     }) 
 
 @app.route('/api/v1/hetlhz')
-def hetlh():
+def hetlhz():
     return jsonify({'status':'up'}), 200
 
 if __name__ == '__main__':

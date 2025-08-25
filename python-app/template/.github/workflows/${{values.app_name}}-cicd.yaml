@@ -52,10 +52,20 @@ jobs:
           curl -ksSL https://argocd-server.argocd/download/argocd-linux-amd64 >> argocd;
           chmod +x argocd;
           sudo mv ./argocd /usr/local/bin/argocd
+      
+      - name: Argocd login
+        shell: bash
+        run: |
+          argocd login argocd-server.argocd \
+            --insecure \
+            --grpc-web \
+            --username admin \
+            --password  ${{ '${{ secrets.ARGOCD_PASSWORD }}' }};
 
       - name: Ensure argocd repo ad app
         shell: bash
         run: |
+          
           # Connects the argocd repo
           REPO="https://github.com/eduaran-org/${{values.app_name}}.git"
           argocd repo list | grep -q $REPO || argocd repo add $REPO
@@ -74,10 +84,5 @@ jobs:
       - name: Argocd app sync
         shell: bash
         run: |
-          argocd login argocd-server.argocd \
-            --insecure \
-            --grpc-web \
-            --username admin \
-            --password  ${{ '${{ secrets.ARGOCD_PASSWORD }}' }};
           argocd app sync ${{values.app_name}}
           argocd app wait ${{values.app_name}} --timeout 180

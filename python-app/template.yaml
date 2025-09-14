@@ -19,9 +19,9 @@ spec:
         - environment
       properties:
         department:
-          title: Department
+          title: Departamento
           type: string
-          ui:field: name
+          ui:field: EntityPicker
           ui:options:
             catalogFilter:
               kind: Component

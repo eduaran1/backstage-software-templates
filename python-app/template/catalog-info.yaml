@@ -32,4 +32,4 @@ spec:
   owner: development
   definition:
     $text: |
-      $openapi: ./openapi.yaml
+      $openapi: https://raw.githubusercontent.com/eduaran-org/${{values.app_name}}/master/openapi.yaml

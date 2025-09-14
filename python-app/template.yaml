@@ -14,18 +14,9 @@ spec:
   parameters:
     - title: Fill in some steps
       required:
-        - department
         - component_id
         - environment
       properties:
-        department:
-          title: Departamento
-          type: string
-          ui:field: EntityPicker
-          ui:options:
-            catalogFilter:
-              kind: Component
-              spec.type: department
         component_id:
           title: Component name
           type: string

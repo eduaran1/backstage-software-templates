@@ -1,0 +1,65 @@
+openapi: 3.0.3
+info:
+  title: API Python App 1
+  version: 1.0.0
+  description: |
+    API que expone endpoints básicos de salud e información
+    de la aplicación Python App 1 en el entorno de desarrollo (HTTP).
+servers:
+  - url: http://${{values.app_name}}-${{values.app_env}}.test.com
+    description: Servidor de desarrollo (HTTP)
+
+paths:
+  /api/v1/healthz:
+    get:
+      summary: Chequeo de salud del servicio
+      description: Verifica que el servicio esté disponible y respondiendo correctamente.
+      operationId: getHealthz
+      responses:
+        '200':
+          description: El servicio responde correctamente
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: Estado actual del servicio
+                    example: ok
+        '500':
+          description: El servicio no responde correctamente
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: error
+
+  /api/v1/info:
+    get:
+      summary: Información del servicio
+      description: Devuelve información general de la aplicación Python App 1.
+      operationId: getInfo
+      responses:
+        '200':
+          description: Información obtenida exitosamente
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: Nombre del servicio
+                    example: Python App 1
+                  version:
+                    type: string
+                    description: Versión actual del servicio
+                    example: 1.0.0
+                  description:
+                    type: string
+                    description: Descripción breve del servicio
+                    example: API para monitoreo e información de la aplicación Python App 1

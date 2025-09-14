@@ -32,7 +32,7 @@ spec:
         openapiPath:
           type: string
           title: Ruta del OpenAPI
-          description: Ruta al archivo openapi.yaml en el repo (ej: ./openapi.yaml)
+          description: Path swagger file
           default: ./openapi.yaml
 
   # here's the steps that are executed in series in the scaffolder backend

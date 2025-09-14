@@ -19,6 +19,8 @@ kind: API
 metadata:
   name: ${{values.app_name}}-api
   description: API del servicio ${{ values.name }}
+  annotations:
+    backstage.io/openapi-ref: ${{ values.openapiPath }}
 spec:
   type: openapi
   lifecycle: experimental

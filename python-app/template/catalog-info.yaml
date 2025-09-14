@@ -10,3 +10,22 @@ spec:
   type: service
   lifecycle: experimental
   owner: development
+  providesApis:
+    - healthcheck-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: healthcheck-api
+  description: The healthcheck API
+  tags:
+    - python
+    - health
+    - info
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: development
+  definition:
+    $text: |
+      $openapi: http://${{values.app_name}}-${{values.app_env}}.test.com/openapi.yaml

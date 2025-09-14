@@ -11,25 +11,21 @@ spec:
   lifecycle: experimental
   owner: development
   providesApis:
-    - healthcheck-api
+    - ${{values.app_name}}-api
 
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: healthcheck-api
-  description: The healthcheck API
+  name: ${{values.app_name}}-api
+  description: API del servicio ${{ values.name }}
   annotations:
     github.com/project-slug: eduaran-org/${{values.app_name}}
     backstage.io/openapi-ref: dir:.
-  tags:
-    - python
-    - health
-    - info
 spec:
   type: openapi
   lifecycle: experimental
   owner: development
   definition:
     $text: |
-      $openapi: https://raw.githubusercontent.com/eduaran-org/${{values.app_name}}/master/openapi.yaml
+      $openapi: ${{ values.openapiPath }}

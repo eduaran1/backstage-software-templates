@@ -29,6 +29,11 @@ spec:
           enum:
             - dev
             - prod
+        openapiPath:
+          type: string
+          title: Ruta del OpenAPI
+          description: Ruta al archivo openapi.yaml en el repo (ej: ./openapi.yaml)
+          default: ./openapi.yaml
 
   # here's the steps that are executed in series in the scaffolder backend
   steps:

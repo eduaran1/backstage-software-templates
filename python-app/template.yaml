@@ -17,6 +17,15 @@ spec:
         - component_id
         - environment
       properties:
+        department:
+          title: Department
+          type: string
+          ui:field:EntityPicker
+          ui:options:
+            catalogFilter:
+              kind: Component
+              spec.type: department
+              metadata.namespace: departments
         component_id:
           title: Component name
           type: string

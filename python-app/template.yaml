@@ -29,12 +29,6 @@ spec:
           enum:
             - dev
             - prod
-        openapiPath:
-          type: string
-          title: Ruta del OpenAPI
-          description: Path swagger file
-          default: ./openapi.yaml
-
   # here's the steps that are executed in series in the scaffolder backend
   steps:
     - id: fetchBase

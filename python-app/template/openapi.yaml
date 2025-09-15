@@ -1,12 +1,12 @@
 openapi: 3.0.3
 info:
-  title: API Python App 1
+  title: API Python ${{values.app_name}}
   version: 1.0.0
   description: |
     API que expone endpoints básicos de salud e información
     de la aplicación Python App 1 en el entorno de desarrollo (HTTP).
 servers:
-  - url: http://${{values.app_name}}-${{values.app_env}}.test.com
+  - url: http://${{values.app_name}}-${{values.app_env}}.com
     description: Servidor de desarrollo (HTTP)
 
 paths:

@@ -10,11 +10,11 @@ servers:
     description: Servidor de desarrollo (HTTP)
 
 paths:
-  /api/v1/healthz:
+  /api/v1/health:
     get:
       summary: Chequeo de salud del servicio
       description: Verifica que el servicio esté disponible y respondiendo correctamente.
-      operationId: getHealthz
+      operationId: getHealth
       responses:
         '200':
           description: El servicio responde correctamente

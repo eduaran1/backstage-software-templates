@@ -25,7 +25,6 @@ spec:
             catalogFilter:
               kind: Component
               spec.type: department
-              metadata.namespace: departments
         component_id:
           title: Component name
           type: string

@@ -36,17 +36,10 @@ spec:
           ui:options:
             catalogFilter:
               kind: Component
-              spec.type: department
+              spec:
+                type: service
   # here's the steps that are executed in series in the scaffolder backend
   steps:
-    - id: log
-      name: Mostrar selección
-      action: debug:log
-      input:
-        message: |
-          Se creará el componente: {{ parameters.name }}
-          Departamento seleccionado: {{ parameters.department }}
-          
     - id: fetchBase
       name: Fetch Base
       action: fetch:template

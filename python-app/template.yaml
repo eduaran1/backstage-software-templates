@@ -16,15 +16,7 @@ spec:
       required:
         - component_id
         - environment
-      properties:
-        department:
-          title: Department
-          type: string
-          ui:field: EntityPicker
-          ui:options:
-            catalogFilter:
-              kind: Component
-              spec.type: department
+      properties:        
         component_id:
           title: Component name
           type: string
@@ -37,8 +29,24 @@ spec:
           enum:
             - dev
             - prod
+        department:
+          title: Departamento
+          type: string
+          ui:field: EntityPicker
+          ui:options:
+            catalogFilter:
+              kind: Component
+              spec.type: department
   # here's the steps that are executed in series in the scaffolder backend
   steps:
+    - id: log
+      name: Mostrar selección
+      action: debug:log
+      input:
+        message: |
+          Se creará el componente: {{ parameters.name }}
+          Departamento seleccionado: {{ parameters.department }}
+          
     - id: fetchBase
       name: Fetch Base
       action: fetch:template

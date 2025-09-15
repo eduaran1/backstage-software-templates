@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: API Python ${{values.app_name}}
+  title: API ${{values.app_name}}
   version: 1.0.0
   description: |
     API que expone endpoints básicos de salud e información

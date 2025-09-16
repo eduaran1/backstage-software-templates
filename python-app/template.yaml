@@ -31,13 +31,12 @@ spec:
             - prod
         departments:
           title: Department
-          type: array
+          type: string
           ui:field: EntityPicker
           ui:options:
             catalogFilter:
               kind: Group
               spec.type: department
-            multiple: true
             defaultNamespace: department
   # here's the steps that are executed in series in the scaffolder backend
   steps:

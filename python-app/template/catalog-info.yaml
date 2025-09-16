@@ -10,7 +10,7 @@ spec:
   type: service
   lifecycle: experimental
   owner: development
-  partOf: ${{values.app_depto}}
+  system: ${{values.app_depto}}
   providesApis:
     - ${{values.app_name}}-api
 

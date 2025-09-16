@@ -35,7 +35,7 @@ spec:
           ui:field: EntityPicker
           ui:options:
             catalogFilter:
-              kind: Domain
+              kind: Group
               spec.type: department
   # here's the steps that are executed in series in the scaffolder backend
   steps:

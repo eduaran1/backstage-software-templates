@@ -8,7 +8,7 @@ metadata:
     backstage.io/techdocs-ref: dir:.
 relations:
   - type: partOf
-    targetRef: "${{values.department}}"
+    targetRef: ${{values.app_depto}}
 spec:
   type: service
   lifecycle: experimental

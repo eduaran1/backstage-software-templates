@@ -29,7 +29,7 @@ spec:
           enum:
             - dev
             - prod
-        departments:
+        department:
           title: Department
           type: string
           ui:field: EntityPicker

@@ -6,6 +6,9 @@ metadata:
   annotations:
     github.com/project-slug: eduaran-org/${{values.app_name}}
     backstage.io/techdocs-ref: dir:.
+relations:
+  - type: ownedBy
+    targetRef: ${{values.department}}
 spec:
   type: service
   lifecycle: experimental

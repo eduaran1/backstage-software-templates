@@ -25,6 +25,6 @@ spec:
   type: openapi
   lifecycle: experimental
   owner: development
-  partOf: ${{values.app_depto}}
+  system: ${{values.app_depto}}
   definition:
     $text: https://raw.githubusercontent.com/eduaran-org/${{values.app_name}}/master/openapi.yaml

@@ -7,7 +7,7 @@ metadata:
     github.com/project-slug: eduaran-org/${{values.app_name}}
     backstage.io/techdocs-ref: dir:.
 relations:
-  - type: ownedBy
+  - type: partOf
     targetRef: ${{values.department}}
 spec:
   type: service

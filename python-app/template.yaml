@@ -29,14 +29,16 @@ spec:
           enum:
             - dev
             - prod
-        department:
+        departments:
           title: Department
-          type: string
+          type: array
           ui:field: EntityPicker
           ui:options:
             catalogFilter:
               kind: Group
               spec.type: department
+            multiple: true
+            defaultNamespace: department
   # here's the steps that are executed in series in the scaffolder backend
   steps:
     - id: log

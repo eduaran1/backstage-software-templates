@@ -35,7 +35,7 @@ spec:
           ui:field: EntityPicker
           ui:options:
             catalogFilter:
-              kind: Component
+              kind: Group
               spec.type: department
   # here's the steps that are executed in series in the scaffolder backend
   steps:
@@ -44,7 +44,7 @@ spec:
       action: debug:log
       input:
         message: "Selected department: ${{ parameters.department }}"
-        
+
     - id: fetchBase
       name: Fetch Base
       action: fetch:template

@@ -41,12 +41,6 @@ spec:
             defaultNamespace: department
   # here's the steps that are executed in series in the scaffolder backend
   steps:
-    - id: log
-      name: Log selected department
-      action: debug:log
-      input:
-        message: "Selected department: ${{ parameters.department }}"
-
     - id: fetchBase
       name: Fetch Base
       action: fetch:template
